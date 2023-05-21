@@ -39,3 +39,9 @@ def bleu_score(references, candidates):
     score = corpus_bleu(references, candidates) * 100
     return bleu1, bleu2, bleu3, bleu4, score, references, candidates
 
+def corpus_meteor(references, candidates):
+    meteor_score_sentences_list = list()
+    [meteor_score_sentences_list.append(meteor_score(references, candidates)) for expect, predict in zip(references, candidates)]
+    meteor_score_res = np.mean(meteor_score_sentences_list)
+    return meteor_score_res
+
