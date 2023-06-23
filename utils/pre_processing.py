@@ -27,7 +27,7 @@ def pop_range(x, y, min_length=0, max_length=1e10):
 
 def resub(data):
     data = re.sub('\&#?[a-z0-9]+;', '', data) # remove html entity
-    # keep only english and vietnamese characters
+    # keep only english and hindi characters
     data = re.sub("[^a-z0-9A-Z_ \n\r\.\'?,!ऀँंःऄअआइईउऊऋऌऍऎएऐऑऒओओऔकखगघङचछजझञटठडढणतथदधनऩपफबभमयरऱलळऴवशषसहऺऺऻ़ऽािीुूृॄॅॆेैॉॊोौ्ॎॏॐ॒॑॓॔ॕॖॗक़ख़ग़ज़ड़ढ़फ़य़ॠॡ।ॣॢ॥०१२३४५६७८९॰ॱॲॳॴॵॶॷॸॹॺॻॼॽॾॿ]", "", data)
     data = re.sub(' +', ' ', data) # remove duplicate white space
     
